@@ -19,13 +19,13 @@ public class HelloServerDemo extends UnicastRemoteObject
     public static void main(String args[]) {
         try {
 // Creates an object of the HelloServer class. 
-            HelloServer obj = new HelloServer();
+            HelloServerDemo obj = new HelloServerDemo();
 // Bind this object instance to the name "HelloServer". 
             Naming.rebind("Hello", obj);
             System.out.println("Ligado no registro");
         } catch (Exception ex) {
             System.out.println("error: " + ex.getMessage());
-            e.printStackTrace();
+            ex.printStackTrace();
         }
     }
 }
