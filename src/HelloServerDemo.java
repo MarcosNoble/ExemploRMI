@@ -1,9 +1,9 @@
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-/* 
-Classname: HelloServerDemo 
-Purpose: The RMI server. 
+/*
+Classname: HelloServerDemo
+Purpose: The RMI server.
 */
 public class HelloServerDemo extends UnicastRemoteObject
         implements Hello {
@@ -18,9 +18,9 @@ public class HelloServerDemo extends UnicastRemoteObject
 
     public static void main(String args[]) {
         try {
-// Creates an object of the HelloServer class. 
+// Creates an object of the HelloServer class.
             HelloServerDemo obj = new HelloServerDemo();
-// Bind this object instance to the name "HelloServer". 
+// Bind this object instance to the name "HelloServer".
             Naming.rebind("Hello", obj);
             System.out.println("Ligado no registro");
         } catch (Exception ex) {
