@@ -11,7 +11,7 @@ public class Server {
     public static void main(String[] args) {
         try {
             Registry registro = LocateRegistry.createRegistry(1099);
-            Naming.rebind("rmi://localshot:1099/Ola", new HelloI());
+            Naming.rebind("rmi://localhost:1099/Ola", new HelloI());
         } catch (RemoteException | MalformedURLException e) {
             e.printStackTrace();
         }

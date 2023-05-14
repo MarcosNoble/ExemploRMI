@@ -12,6 +12,6 @@ public class HelloI extends UnicastRemoteObject implements  Hello {
 
     @Override
     public String Hello() throws RemoteException {
-        return "ola";
+        return "Olá_RMI teste";
     }
 }
